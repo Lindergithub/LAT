@@ -14,7 +14,7 @@
 ### [筆記]
 ### [VIDEO](https://www.youtube.com/playlist?list=PLH3VeiMX0ckiBTEYePXLZl7kMlbC--bZt)
 ### PPT
-> + [week1]https://docs.google.com/presentation/d/e/2PACX-1vSInSmBw4pmnFj-4BoVDQcXDkXJ23WMGXBWPkHTTm99t0rigaeIYzMpjC8Q7nKu9SZWeNAs6q1Wy5ZE/pub?start=false&loop=false&delayms=3000&slide=id.g208849b0d5d_1_43)
+> + [week1](https://docs.google.com/presentation/d/e/2PACX-1vSInSmBw4pmnFj-4BoVDQcXDkXJ23WMGXBWPkHTTm99t0rigaeIYzMpjC8Q7nKu9SZWeNAs6q1Wy5ZE/pub?start=false&loop=false&delayms=3000&slide=id.g208849b0d5d_1_43)
 > + [week2](https://docs.google.com/presentation/d/e/2PACX-1vT-TbdyqnFFYyOREkTHFGj8OMr3z4-77otHUtDB1PZk_hy4H1sO0_ZXdsaTg1qping-CP_2kEhcvlu0/pub?start=false&loop=false&delayms=3000&slide=id.p)
 > + [week3]
 > + [week4]
