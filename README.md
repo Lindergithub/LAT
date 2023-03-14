@@ -26,7 +26,7 @@
 
 
 ## 作業連結區
-+ [HW1]
++ [HW1](https://github.com/Lindergithub/LAT/blob/main/lat_hw1.ipynb)
 + [HW2]
 + [HW3]
 + [HW4]
