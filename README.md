@@ -11,7 +11,7 @@
 > + [專題連結區](https://github.com/Lindergithub/LAT/edit/main/README.md#%E5%B0%88%E9%A1%8C%E9%80%A3%E7%B5%90%E5%8D%80)
 ## 課程筆記區
 ### [LAT repo](https://docs.google.com/spreadsheets/d/e/2PACX-1vT_zJV6gYfbNv8irou82vBJjx76eTwu8-oBLzV5VlQhuD8eNychjpKbTCAZgGJKv5og303hZdXX_ygo/pubhtml#)
-### [筆記]
+### ![助教時間](001.jpg)
 ### [VIDEO](https://www.youtube.com/playlist?list=PLH3VeiMX0ckiBTEYePXLZl7kMlbC--bZt)
 ### PPT
 > + [week1](https://docs.google.com/presentation/d/e/2PACX-1vSInSmBw4pmnFj-4BoVDQcXDkXJ23WMGXBWPkHTTm99t0rigaeIYzMpjC8Q7nKu9SZWeNAs6q1Wy5ZE/pub?start=false&loop=false&delayms=3000&slide=id.g208849b0d5d_1_43)
