@@ -18,8 +18,8 @@
 > + [week2](https://docs.google.com/presentation/d/e/2PACX-1vT-TbdyqnFFYyOREkTHFGj8OMr3z4-77otHUtDB1PZk_hy4H1sO0_ZXdsaTg1qping-CP_2kEhcvlu0/pub?start=false&loop=false&delayms=3000&slide=id.p)
 > + [week3](https://docs.google.com/presentation/d/e/2PACX-1vRQ-QbIIGrpvbC7PkYFtWhT8hhT2pREfIYP5OxiYPF125Ag1u4ln-f7EKR_znsU-bM1z-RrxFY3qHba/pub?start=false&loop=false&delayms=3000&slide=id.p)
 > + [week4](https://docs.google.com/presentation/d/e/2PACX-1vQTkndQGs2LVuR27vv0lbSpZPKY6j-7pNcF4SvSTZhflcTOi2XxCp8iSFgxiX5KoB61cI9ZPZix8Vn5/pub?start=false&loop=false&delayms=3000&slide=id.p)
-> + [week5]
-> + [week6]
+> + [week5]chatgpt
+> + [week6](https://docs.google.com/presentation/d/e/2PACX-1vSF3Y3YNF7rwKxFz4tKxHwZY1qOdM17iDWN9emYrDkXIHYdIDXxOtS2j5sfq18HPO6w4-ye7ekB9lvN/pub?start=false&loop=false&delayms=3000&slide=id.p)
 > + [week7]
 > + [week8]
 > + [week9]
