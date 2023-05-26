@@ -28,7 +28,7 @@
 > + week7 放假一次
 > + week8 - Intro to Azure AI
 > [Video](https://www.youtube.com/watch?v=JYiXyxKLJc0&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=2)
-> + week9
+> + [week9 - 專題說明](https://docs.google.com/presentation/d/e/2PACX-1vSdW6bWsDN67PZCfNunXnGfpgvxR2GFO39zJbeqFaUX9xzkGeUkO-vOo5lxuvg-aIvZC7IwjDJdt0iM/pub?start=false&loop=false&delayms=3000&slide=id.g23dd2219a46_0_124)
 > [Video](https://www.youtube.com/watch?v=5n80gistmxU)
 > + week10 - Azure Text Sentiment Analysis
 > [Video](https://www.youtube.com/watch?v=HTvl5skHsck&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=3&t=637s)
