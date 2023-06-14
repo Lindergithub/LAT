@@ -7,7 +7,7 @@
 ## 作業呈現
 > [1] [聊天機器人對話截圖](https://github.com/Lindergithub/LAT/edit/main/HW4/README.md#%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%B0%8D%E8%A9%B1%E6%88%AA%E5%9C%96)
 >
-> [2] [程式碼](https://github.com/Lindergithub/LAT/edit/main/HW4/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC)
+> [2] [程式碼](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC)
 ### 聊天機器人對話截圖
 <img src='chatbot.png' width='500'> <img src='chatrot.png' width='500'>
 
