@@ -1,53 +1,93 @@
-# 111-2臺師大教育大數據微學程
+# HW4 情緒分析機器人
+## 作業要求
+> - [x] Level 1: 直接辨識訊息內容(positive/negetive/netural)
+> - [x] Level 2: 改成中文(正向/負向/中性)，並顯示信心指數
+> - [ ] Level 3: 針對評論主詞套入回覆訊息
 
-## 課程資訊
-> + 課程名稱：學習分析工具實務運用
-> + 授課教師：蔡芸琤
-> + 姓名：林鈺茹
-> + 系級：科技系114年級
-## 目錄
-> + [課程筆記區](https://github.com/Lindergithub/LAT/edit/main/README.md#%E8%AA%B2%E7%A8%8B%E7%AD%86%E8%A8%98%E5%8D%80)
-> + [作業連結區](https://github.com/Lindergithub/LAT/edit/main/README.md#%E4%BD%9C%E6%A5%AD%E9%80%A3%E7%B5%90%E5%8D%80)
-> + [專題連結區](https://github.com/Lindergithub/LAT/edit/main/README.md#%E5%B0%88%E9%A1%8C%E9%80%A3%E7%B5%90%E5%8D%80)
-## 課程筆記區
-### [LAT repo](https://docs.google.com/spreadsheets/d/e/2PACX-1vT_zJV6gYfbNv8irou82vBJjx76eTwu8-oBLzV5VlQhuD8eNychjpKbTCAZgGJKv5og303hZdXX_ygo/pubhtml#)
-### [Ryan老師的課程筆記](https://hospitable-top-f1b.notion.site/111-2-NTNU-31ed6721887f4b24bd52c6102a8d99c7)
-### PPT 
-> + [week1](https://docs.google.com/presentation/d/e/2PACX-1vSInSmBw4pmnFj-4BoVDQcXDkXJ23WMGXBWPkHTTm99t0rigaeIYzMpjC8Q7nKu9SZWeNAs6q1Wy5ZE/pub?start=false&loop=false&delayms=3000&slide=id.p)
-> [Video](https://www.youtube.com/watch?v=xm7m9u6jUgc)
-> + [week2](https://docs.google.com/presentation/d/e/2PACX-1vT-TbdyqnFFYyOREkTHFGj8OMr3z4-77otHUtDB1PZk_hy4H1sO0_ZXdsaTg1qping-CP_2kEhcvlu0/pub?start=false&loop=false&delayms=3000&slide=id.p)
-> [Video](https://www.youtube.com/watch?v=HoPOMwI2NhA)
-> + [week3](https://docs.google.com/presentation/d/e/2PACX-1vRQ-QbIIGrpvbC7PkYFtWhT8hhT2pREfIYP5OxiYPF125Ag1u4ln-f7EKR_znsU-bM1z-RrxFY3qHba/pub?start=false&loop=false&delayms=3000&slide=id.p)
-> [Video. 聲音超怪](https://www.youtube.com/watch?v=0Ug8Pr7miOo)
-> + [week4](https://docs.google.com/presentation/d/e/2PACX-1vQTkndQGs2LVuR27vv0lbSpZPKY6j-7pNcF4SvSTZhflcTOi2XxCp8iSFgxiX5KoB61cI9ZPZix8Vn5/pub?start=false&loop=false&delayms=3000&slide=id.p)
-> [Video](https://www.youtube.com/watch?v=lv04AXEq0Rk)
-> + [week5]chatgpt
-> [Video](https://www.youtube.com/watch?v=d7c-pGlJAOI)
-> + [week6](https://docs.google.com/presentation/d/e/2PACX-1vSF3Y3YNF7rwKxFz4tKxHwZY1qOdM17iDWN9emYrDkXIHYdIDXxOtS2j5sfq18HPO6w4-ye7ekB9lvN/pub?start=false&loop=false&delayms=3000&slide=id.p)
-> [Video](https://www.youtube.com/watch?v=D-k57QOvRlg)
-> + week7 放假一次
-> + week8 - Intro to Azure AI
-> [Video](https://www.youtube.com/watch?v=JYiXyxKLJc0&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=2)
-> + [week9 - 專題說明](https://docs.google.com/presentation/d/e/2PACX-1vSdW6bWsDN67PZCfNunXnGfpgvxR2GFO39zJbeqFaUX9xzkGeUkO-vOo5lxuvg-aIvZC7IwjDJdt0iM/pub?start=false&loop=false&delayms=3000&slide=id.g23dd2219a46_0_124)
-> [Video](https://www.youtube.com/watch?v=5n80gistmxU)
-> + week10 - Azure Text Sentiment Analysis
-> [Video](https://www.youtube.com/watch?v=HTvl5skHsck&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=3&t=637s)
-> + week11 - Final Project Plan & Azure Text Sentiment w/ Line
-> [Video](https://www.youtube.com/watch?v=GLZ9rVEa_54&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=4)
-> + week12 - Hotel Review Bot + JSON Server on Azure + Live Plotly Dashboard
-> [Video](https://www.youtube.com/watch?v=llSEt0FbQT4&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=5)
-> + week13 - Azure Computer Vision API
-> [Video](https://www.youtube.com/watch?v=oNyrigYdVio&list=PL6HWDH-x2DrlD4A3T94sORnZEltA3WKdb&index=6)
-> + [week14]
-> [Video]()
+## 作業呈現
+> [1] [聊天機器人對話截圖](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%B0%8D%E8%A9%B1%E6%88%AA%E5%9C%96)
+>
+> [2] [程式碼](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC)
+### 聊天機器人對話截圖
+<img src='chatbot.png' width='500'> <img src='chatrot.png' width='500'>
 
-### ![助教時間](001.jpg)
-## 作業連結區
-+ [HW1](https://github.com/Lindergithub/LAT/blob/main/lat_hw1.ipynb)
-+ [HW2]
-+ [HW3]
-+ [HW4]
-+ [HW5]
-## 專題連結區
-+ [ppt]
-+ [vedio]
+### 程式碼
+```js
+//基本設定
+'use strict';
+const line = require('@line/bot-sdk'),
+      express = require('express'),
+      configGet = require('config');
+const {TextAnalyticsClient, AzureKeyCredential} = require("@azure/ai-text-analytics");
+
+//Line 組態配置
+const configLine = {
+  channelAccessToken:configGet.get("CHANNEL_ACCESS_TOKEN"),
+  channelSecret:configGet.get("CHANNEL_SECRET")
+};
+
+
+const endpoint = configGet.get("ENDPOINT");
+const apiKey = configGet.get("TEXT_ANALYTICS_API_KEY");
+
+const client = new line.Client(configLine);
+const app = express();
+const port = process.env.PORT || process.env.port || 3001; //要是空的代碼
+
+app.listen(port, ()=>{
+  console.log(`listening on ${port}`);
+});
+
+//Azure 文字情緒分析
+async function MS_TextSentimentAnalysis(thisEvent){
+  console.log("[MS_TextSentimentAnalysis] in");
+  const analyticsClient = new TextAnalyticsClient(endpoint, new AzureKeyCredential(apiKey));
+  let documents = [];
+  documents.push(thisEvent.message.text);
+  //標籤加入中文選項
+  const results = await analyticsClient.analyzeSentiment(documents, 'zh-Hant',{
+    includeOpinionMining:true
+  }); 
+  
+  console.log("[results] ", JSON.stringify(results));
+  //改標籤為「中文」
+  //輸出換行方式："在文字裡面直接加上\n"
+  //給定信心指數
+  let echoText = '';
+  if (results[0].sentiment == 'positive'){
+    echoText = '內容分析：正向\n' + '信心指數：' + results[0].confidenceScores.positive;
+  }
+  else if(results[0].sentiment == 'neutral'){
+    echoText = '內容分析：中性\n' + '信心指數：' + results[0].confidenceScores.neutral;
+  }
+  else{
+    echoText = '內容分析：負向\n' + '信心指數：' + results[0].confidenceScores.negative;
+  }
+
+  const echo = {
+    type:'text',
+    text:echoText
+  };
+     return client.replyMessage(thisEvent.replyToken, echo);
+}
+
+app.post('/callback', line.middleware(configLine),(req, res)=>{
+  Promise
+    .all(req.body.events.map(handleEvent))
+    .then((result)=>res.json(result))
+    .catch((err)=>{
+      console.error(err);
+      res.status(500).end();
+    });
+});
+//設定讀取資料邏輯
+function handleEvent(event){
+  if(event.type !== 'message' || event.message.type !== 'text'){
+    return Promise.resolve(null);
+  }
+//讀進來後，丟到Azure 文字情緒分析
+  MS_TextSentimentAnalysis(event)
+  .catch((err)=>{
+    console.error("Error:",err);    //有錯再顯示
+  });  
+}
