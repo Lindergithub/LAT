@@ -1,7 +1,9 @@
 # HW2 多維視覺化
 ## 作業要求
-沿用HW1資料，做出視覺化圖表，再提出三個新問題。
-### 程式碼
+> 沿用HW1資料，做出視覺化圖表，再提出三個新問題。
+> 
+> 因為無法顯示圖表，nbviewer也跑不出來，所以改用readme
+### [程式碼nbv](https://nbviewer.org/github/Lindergithub/LAT/blob/main/HW2/0621.ipynb)
 ```python
 import pandas as pd
 oedf = pd.read_csv('OE.csv')
