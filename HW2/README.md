@@ -26,12 +26,18 @@ fig.update_layout(xaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 1))
 fig.show()
 ```
 <img src='1.png' width='500'> <img src='2.png' width='500'>
-
 <img src='3.png' width='500'> <img src='4.png' width='500'>
-### 教育程度跟是否為IT學生的關係？
-#### IT學生教育程度幾乎都是大學，極少數IT學生是大學以下
 <img src='5.png' width='500'> <img src='6.png' width='500'>
 
-### Q1
+###  問題
+####  Q1適應程度跟教育程度的關係？
+##### 在適應程度為低的學生中，教育程度較高的學生佔多數
+#### Q2適應程度跟是否為IT學生的關係？
+##### 大多數學生的適應程度都是中低等，相較而言，IT學生適應程度低等的比例較低 
+#### Q3教育程度跟是否為IT學生的關係？
+##### IT學生教育程度幾乎都是大學，極少數IT學生是大學以下
+
+
+
 
 
