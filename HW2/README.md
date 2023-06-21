@@ -26,3 +26,6 @@ fig.update_layout(xaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 1))
 fig.show()
 ```
 <img src='newplot.png' width='800'>
+### Q1
+
+
