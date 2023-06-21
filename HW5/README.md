@@ -5,7 +5,7 @@
 ## 作業呈現
 > [1] [截圖]()
 >
-> [2] [程式碼說明]()
+> [2] [程式碼說明](https://github.com/Lindergithub/LAT/blob/main/HW5/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AA%AA%E6%98%8E)
 >
 > [3] [完整程式碼] [main.js](https://github.com/Lindergithub/LAT/blob/main/HW5/main%E6%8B%B7%E8%B2%9D.js)
 ## 截圖
