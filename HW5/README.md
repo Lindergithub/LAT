@@ -3,13 +3,13 @@
 > 目的：幫助學生更加了解樂器
 
 ## 作業呈現
-> [1] [截圖]()
+> [1] [完整截圖](https://docs.google.com/document/d/1c-BcVhjRTDBrjp-di0-uL9Flp13PtClvNpGTNkA8P_k/edit?usp=sharing)
 >
 > [2] [程式碼說明](https://github.com/Lindergithub/LAT/blob/main/HW5/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AA%AA%E6%98%8E)
 >
 > [3] [完整程式碼] [main.js](https://github.com/Lindergithub/LAT/blob/main/HW5/main%E6%8B%B7%E8%B2%9D.js)
 ## 截圖
-<img src='chatbot.png' width='500'> <img src='chatrot.png' width='500'>
+<img src='手風琴.png' width='500'> <img src='長笛.png' width='500'>
 
 ## 程式碼說明
 ### 基本參數設定
