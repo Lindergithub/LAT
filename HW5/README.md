@@ -3,7 +3,7 @@
 > 目的：幫助學生更加了解樂器
 
 ## 作業呈現
-> [1] [完整截圖](https://docs.google.com/document/d/1c-BcVhjRTDBrjp-di0-uL9Flp13PtClvNpGTNkA8P_k/edit?usp=sharing)
+> [1] [測資、截圖](https://docs.google.com/document/d/1c-BcVhjRTDBrjp-di0-uL9Flp13PtClvNpGTNkA8P_k/edit?usp=sharing)
 >
 > [2] [程式碼說明](https://github.com/Lindergithub/LAT/blob/main/HW5/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AA%AA%E6%98%8E)
 >
