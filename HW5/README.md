@@ -7,9 +7,23 @@
 >
 > [2] [程式碼說明](https://github.com/Lindergithub/LAT/blob/main/HW5/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AA%AA%E6%98%8E)
 >
-> [3] [完整程式碼] [main.js](https://github.com/Lindergithub/LAT/blob/main/HW5/main%E6%8B%B7%E8%B2%9D.js)
+> [3] [main.js](https://github.com/Lindergithub/LAT/blob/main/HW5/main%E6%8B%B7%E8%B2%9D.js)
 ## 截圖
-<img src='手風琴.png' width='500'> <img src='長笛.png' width='500'>
+### 鍵盤
+<img src='手風琴.png' width='900'> 
+<img src='鋼琴.png' width='900'> 
+
+### 吹奏
+<img src='長笛.png' width='900'>
+<img src='法國號.png' width='900'> 
+
+### 打擊
+<img src='木琴.png' width='900'> 
+<img src='鼓.png' width='900'> 
+
+### 弦樂
+<img src='小提琴.png' width='900'> 
+<img src='吉他.png' width='900'> 
 
 ## 程式碼說明
 ### 基本參數設定
