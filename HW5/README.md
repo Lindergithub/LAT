@@ -1,93 +1,101 @@
-# HW4 情緒分析機器人
-## 作業要求
-> - [x] Level 1: 直接辨識訊息內容(positive/negetive/netural)
-> - [x] Level 2: 改成中文(正向/負向/中性)，並顯示信心指數
-> - [ ] Level 3: 針對評論主詞套入回覆訊息
+# HW５ 電腦視覺
+## 功能說明
+> 目的：幫助學生更加了解樂器
 
 ## 作業呈現
-> [1] [聊天機器人對話截圖](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%B0%8D%E8%A9%B1%E6%88%AA%E5%9C%96)
+> [1] [完整截圖](https://docs.google.com/document/d/1c-BcVhjRTDBrjp-di0-uL9Flp13PtClvNpGTNkA8P_k/edit?usp=sharing)
 >
-> [2] [程式碼](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC)
-### 聊天機器人對話截圖
-<img src='chatbot.png' width='500'> <img src='chatrot.png' width='500'>
+> [2] [程式碼說明](https://github.com/Lindergithub/LAT/blob/main/HW5/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AA%AA%E6%98%8E)
+>
+> [3] [完整程式碼] [main.js](https://github.com/Lindergithub/LAT/blob/main/HW5/main%E6%8B%B7%E8%B2%9D.js)
+## 截圖
+<img src='手風琴.png' width='500'> <img src='長笛.png' width='500'>
 
-### 程式碼
+## 程式碼說明
+### 基本參數設定
+#### 起始於按鈕：thisButton
 ```js
-//基本設定
-'use strict';
-const line = require('@line/bot-sdk'),
-      express = require('express'),
-      configGet = require('config');
-const {TextAnalyticsClient, AzureKeyCredential} = require("@azure/ai-text-analytics");
-
-//Line 組態配置
-const configLine = {
-  channelAccessToken:configGet.get("CHANNEL_ACCESS_TOKEN"),
-  channelSecret:configGet.get("CHANNEL_SECRET")
-};
-
-
-const endpoint = configGet.get("ENDPOINT");
-const apiKey = configGet.get("TEXT_ANALYTICS_API_KEY");
-
-const client = new line.Client(configLine);
-const app = express();
-const port = process.env.PORT || process.env.port || 3001; //要是空的代碼
-
-app.listen(port, ()=>{
-  console.log(`listening on ${port}`);
-});
-
-//Azure 文字情緒分析
-async function MS_TextSentimentAnalysis(thisEvent){
-  console.log("[MS_TextSentimentAnalysis] in");
-  const analyticsClient = new TextAnalyticsClient(endpoint, new AzureKeyCredential(apiKey));
-  let documents = [];
-  documents.push(thisEvent.message.text);
-  //標籤加入中文選項
-  const results = await analyticsClient.analyzeSentiment(documents, 'zh-Hant',{
-    includeOpinionMining:true
-  }); 
-  
-  console.log("[results] ", JSON.stringify(results));
-  //改標籤為「中文」
-  //輸出換行方式："在文字裡面直接加上\n"
-  //給定信心指數
-  let echoText = '';
-  if (results[0].sentiment == 'positive'){
-    echoText = '內容分析：正向\n' + '信心指數：' + results[0].confidenceScores.positive;
-  }
-  else if(results[0].sentiment == 'neutral'){
-    echoText = '內容分析：中性\n' + '信心指數：' + results[0].confidenceScores.neutral;
-  }
-  else{
-    echoText = '內容分析：負向\n' + '信心指數：' + results[0].confidenceScores.negative;
-  }
-
-  const echo = {
-    type:'text',
-    text:echoText
-  };
-     return client.replyMessage(thisEvent.replyToken, echo);
-}
-
-app.post('/callback', line.middleware(configLine),(req, res)=>{
-  Promise
-    .all(req.body.events.map(handleEvent))
-    .then((result)=>res.json(result))
-    .catch((err)=>{
-      console.error(err);
-      res.status(500).end();
+$(document).ready(function(){
+    //do something
+    $("#thisButton").click(function(){
+        processImage();
     });
 });
-//設定讀取資料邏輯
-function handleEvent(event){
-  if(event.type !== 'message' || event.message.type !== 'text'){
-    return Promise.resolve(null);
-  }
-//讀進來後，丟到Azure 文字情緒分析
-  MS_TextSentimentAnalysis(event)
-  .catch((err)=>{
-    console.error("Error:",err);    //有錯再顯示
-  });  
-}
+```
+#### 執行function內容並確認區域與所選擇的相同或使用客製化端點網址
+```js
+function processImage() {
+    var url = "https://eastus.api.cognitive.microsoft.com/";
+    var uriBase = url + "vision/v2.1/analyze";
+```
+#### 客製化服務參數設定
+```js    
+    var params = {
+        "visualFeatures": "Description,Objects",
+        "details": "Landmarks",
+        "language": "en",
+    };
+```
+### 使用者介面，輸入並分析
+#### 顯示分析的圖片
+```js
+    var sourceImageUrl = document.getElementById("inputImage").value;
+    document.querySelector("#sourceImage").src = sourceImageUrl;
+```
+#### 送出分析
+```js
+    $.ajax({
+        url: uriBase + "?" + $.param(params),
+        // Request header
+        beforeSend: function(xhrObj){
+            xhrObj.setRequestHeader("Content-Type","application/json");
+            xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+        },
+        type: "POST",
+        // Request body
+        data: '{"url": ' + '"' + sourceImageUrl + '"}',
+    })
+    .done(function(data) {
+```
+### 輸出結果設定
+#### 顯示JSON內容
+```js
+        $("#responseTextArea").val(JSON.stringify(data, null, 2));
+```
+#### 先清空
+```js
+        $("#picDescription").empty();
+```
+#### 先看有沒有一句話描述，有就說「可能是...」，沒有就説「不好説...」
+```js
+        $("#picDescription").text(data.description.captions && data.description.captions.length > 0
+        ? "It might be " + data.description.captions[0].text + "!"
+        : "It's hard to describe this picture in one sentence!");
+        //註解意思一樣，但註解所跑出來的結果<br>沒有換行效果，所以直接用chatgpt改成上面三行
+        // $("#picDescription").text();
+        // if (data.description.captions && data.description.captions.length > 0) {
+        //     $("#picDescription").text("It might be " + data.description.captions[0].text + "<br>")
+        // } else {
+        //     $("#picDescription").text("It's hard to describe this picture in one sentence!" + "<br>")
+        // };
+```
+#### 觀察後發現「object」都會出現正確答案，用if判斷objects是否為空，若否則輸出項目0，有多個項目則進入for迴圈
+```js 
+        if (data.objects && data.objects.length > 0) {
+        $("#picDescription").append("<br>" + "it might be a " + data.objects[0].object )    
+            for (var x = 1; x < data.objects.length; x++) {
+                $("#picDescription").append("<br>" + "or a " + data.objects[x].object);
+            }
+        $("#picDescription").append("!")    
+        }
+    })
+```
+#### 有問題丟出錯誤訊息
+```js
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        var errorString = (errorThrown === "") ? "Error. " : errorThrown + " (" + jqXHR.status + "): ";
+        errorString += (jqXHR.responseText === "") ? "" : jQuery.parseJSON(jqXHR.responseText).message;
+        alert(errorString);
+    });
+};
+```
