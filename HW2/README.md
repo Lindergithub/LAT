@@ -1,83 +1,26 @@
 # HW2 多維視覺化
 ## 作業要求
-> 沿用HW1資料，做出視覺化圖表，再提出三個新問題。
+沿用HW1資料，做出視覺化圖表，再提出三個新問題。
 ### 程式碼
 ```python
-//基本設定
-'use strict';
-const line = require('@line/bot-sdk'),
-      express = require('express'),
-      configGet = require('config');
-const {TextAnalyticsClient, AzureKeyCredential} = require("@azure/ai-text-analytics");
-
-//Line 組態配置
-const configLine = {
-  channelAccessToken:configGet.get("CHANNEL_ACCESS_TOKEN"),
-  channelSecret:configGet.get("CHANNEL_SECRET")
-};
-
-
-const endpoint = configGet.get("ENDPOINT");
-const apiKey = configGet.get("TEXT_ANALYTICS_API_KEY");
-
-const client = new line.Client(configLine);
-const app = express();
-const port = process.env.PORT || process.env.port || 3001; //要是空的代碼
-
-app.listen(port, ()=>{
-  console.log(`listening on ${port}`);
-});
-
-//Azure 文字情緒分析
-async function MS_TextSentimentAnalysis(thisEvent){
-  console.log("[MS_TextSentimentAnalysis] in");
-  const analyticsClient = new TextAnalyticsClient(endpoint, new AzureKeyCredential(apiKey));
-  let documents = [];
-  documents.push(thisEvent.message.text);
-  //標籤加入中文選項
-  const results = await analyticsClient.analyzeSentiment(documents, 'zh-Hant',{
-    includeOpinionMining:true
-  }); 
-  
-  console.log("[results] ", JSON.stringify(results));
-  //改標籤為「中文」
-  //輸出換行方式："在文字裡面直接加上\n"
-  //給定信心指數
-  let echoText = '';
-  if (results[0].sentiment == 'positive'){
-    echoText = '內容分析：正向\n' + '信心指數：' + results[0].confidenceScores.positive;
-  }
-  else if(results[0].sentiment == 'neutral'){
-    echoText = '內容分析：中性\n' + '信心指數：' + results[0].confidenceScores.neutral;
-  }
-  else{
-    echoText = '內容分析：負向\n' + '信心指數：' + results[0].confidenceScores.negative;
-  }
-
-  const echo = {
-    type:'text',
-    text:echoText
-  };
-     return client.replyMessage(thisEvent.replyToken, echo);
-}
-
-app.post('/callback', line.middleware(configLine),(req, res)=>{
-  Promise
-    .all(req.body.events.map(handleEvent))
-    .then((result)=>res.json(result))
-    .catch((err)=>{
-      console.error(err);
-      res.status(500).end();
-    });
-});
-//設定讀取資料邏輯
-function handleEvent(event){
-  if(event.type !== 'message' || event.message.type !== 'text'){
-    return Promise.resolve(null);
-  }
-//讀進來後，丟到Azure 文字情緒分析
-  MS_TextSentimentAnalysis(event)
-  .catch((err)=>{
-    console.error("Error:",err);    //有錯再顯示
-  });  
-}
+import pandas as pd
+oedf = pd.read_csv('OE.csv')
+import matplotlib.pyplot as plt
+oedf.columns = oedf.columns.str.lower()
+oedf = oedf.applymap(lambda x: x.lower() if type(x) == str else x)
+oedf = oedf.rename(columns={"it student": "IT student"})
+oedf = oedf.rename(columns={"location": "live in town"})
+oedf['education level'] = oedf['education level'].replace('college', 'university')
+oedf['education level'] = oedf['education level'].replace(['school'],['below university']) 
+oedf=oedf.drop(columns=['device', 'self lms','load-shedding'])
+df = oedf.groupby(['gender','education level','adaptivity level']).size().reset_index()
+df = df.rename(columns={0: "count"})
+import plotly.express as px
+#bar
+fig = px.bar(df, x="adaptivity level", y="count", color="education level", title="適應程度－教育－性別",width=800, height=800,text='gender')
+fig.update_traces(textposition='inside')
+fig.update_layout(yaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 50))
+fig.update_layout(xaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 1))
+fig.show()
+```
+###圖形輸出結果
