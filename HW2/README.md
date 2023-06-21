@@ -1,18 +1,8 @@
-# HW4 情緒分析機器人
+# HW2 多維視覺化
 ## 作業要求
-> - [x] Level 1: 直接辨識訊息內容(positive/negetive/netural)
-> - [x] Level 2: 改成中文(正向/負向/中性)，並顯示信心指數
-> - [ ] Level 3: 針對評論主詞套入回覆訊息
-
-## 作業呈現
-> [1] [聊天機器人對話截圖](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E8%81%8A%E5%A4%A9%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%B0%8D%E8%A9%B1%E6%88%AA%E5%9C%96)
->
-> [2] [程式碼](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md#%E7%A8%8B%E5%BC%8F%E7%A2%BC)
-### 聊天機器人對話截圖
-<img src='chatbot.png' width='500'> <img src='chatrot.png' width='500'>
-
+> 沿用HW1資料，做出視覺化圖表，再提出三個新問題。
 ### 程式碼
-```js
+```python
 //基本設定
 'use strict';
 const line = require('@line/bot-sdk'),
