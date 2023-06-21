@@ -25,7 +25,13 @@ fig.update_layout(yaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 50))
 fig.update_layout(xaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 1))
 fig.show()
 ```
-<img src='newplot.png' width='800'>
+<img src='1.png' width='500'> <img src='2.png' width='500'>
+
+<img src='3.png' width='500'> <img src='4.png' width='500'>
+### 教育程度跟是否為IT學生的關係？
+#### IT學生教育程度幾乎都是大學，極少數IT學生是大學以下
+<img src='5.png' width='500'> <img src='6.png' width='500'>
+
 ### Q1
 
 
