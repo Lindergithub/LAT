@@ -23,5 +23,4 @@ fig.update_layout(yaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 50))
 fig.update_layout(xaxis=dict(tickmode = 'linear',tick0 = 0,dtick = 1))
 fig.show()
 ```
-###圖形輸出結果
 <img src='newplot.png' width='800'>
