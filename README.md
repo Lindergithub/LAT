@@ -44,7 +44,7 @@
 ### ![助教時間](001.jpg)
 ## 作業連結區
 + [HW1](https://github.com/Lindergithub/LAT/blob/main/lat_hw1.ipynb)
-+ [HW2]
++ [HW2](https://github.com/Lindergithub/LAT/blob/main/0621.ipynb)
 + [HW3]
 + [HW4](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md)
 + [HW5]
