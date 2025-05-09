@@ -51,6 +51,6 @@
 + [HW4](https://github.com/Lindergithub/LAT/blob/main/HW4/README.md)
 + [HW5](https://github.com/Lindergithub/LAT/blob/main/HW5/README.md)
 ## 專題連結區
-+ [ppt]（https://github.com/Lindergithub/LAT/blob/main/專題連結區/ppt/ESTube.pdf）
++ [ppt](https://github.com/Lindergithub/LAT/blob/main/ESTube.pdf)
 + [Demo](https://www.figma.com/proto/MxxlazA7YkrJDzn9hD14Qj/LAT?type=design&node-id=25-94&scaling=min-zoom&page-id=25%3A93&starting-point-node-id=25%3A94)
-+ [vedio]
++ [Vedio](https://youtu.be/YaUh-HN5W9A)
